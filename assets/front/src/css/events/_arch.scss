@@ -1,0 +1,105 @@
+$card-width: 30%; // Adjust card width as desired
+$card-margin: 10px; // Adjust card margin as desired
+
+.events-wrapper{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  .page-events-title{
+    text-align: center;
+  }
+  .as-list {
+    display: flex; /* Switch to flexbox for list layout */
+    flex-direction: column; /* Stack items vertically */
+    .event-container {
+      width: 100%; /* Ensure full width (existing) */
+      height: 400px; /* Set container height */
+    }
+
+    .event-card {
+      display: flex; /* Enable flexbox for card layout */
+      width: 100%; /* Cards take full width within container */
+      flex-direction: row;
+      a{
+        flex: 1 40%;
+      }
+      .event-img {
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .event-content {
+        padding: 15px;
+        flex: 1 60%;
+        order: 2;
+      }
+    }
+    .event-footer{
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-content: end;
+      min-height: 180px;
+    }
+  }
+  .event-list {
+
+
+
+    margin: 0 auto; /* Center the container horizontally */
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to next line */
+  }
+  .event-card {
+    display: flex;
+    flex-direction: column;
+    width: $card-width;
+    margin: $card-margin;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+  .event-footer{
+    margin-top: 10px;
+    display: flex;
+    justify-content: start;
+  }
+
+  .event-card img {
+    width: 100%; // Ensure image fills the card width
+  }
+
+  .event-content {
+    padding: 15px;
+    flex: 1;
+  }
+
+  .event-read-more-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    height: 44px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  .event-read-more-btn:hover {
+    background-color: #2980b9;
+  }
+
+  .event-date-time {
+    font-size: 0.8em;
+    color: #999;
+  }
+
+  .event-date-time span {
+    margin-right: 10px; // Optional spacing between date and time
+  }
+
+}

@@ -1,0 +1,155 @@
+// Define variables for the grid
+$grid-columns: 12;
+$gutter-width: 20px;
+$container-width: 1440px;
+$wrapper-width: 1140px;
+$wrapper-content: 880px;
+$screen-medium: 768px;
+$screen-lg: 992px;
+$screen-xl: 1337px;
+$screen-xxl: 1440px;
+$wrapper-xxl: 974px;
+$screen-sm: 576px;
+$screen-l: 1080px;
+// Define the container styles
+.container {
+  width: 100%;
+  max-width: $container-width;
+  margin: 0 auto; 
+  box-sizing: border-box;
+  
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: $wrapper-width;
+  padding: 0;
+  width: 100%;
+}
+
+.wrapper-xxl{
+  @media (min-width: $screen-xxl){
+    max-width: $wrapper-xxl !important;
+
+  }
+    
+}
+
+
+.wrapper-content {
+  margin: 0 auto;
+  max-width: $wrapper-content;
+  padding: 0;
+  width: 100%;
+}
+
+.mobile-row{
+  @media (max-width: $screen-medium){
+    flex-direction: column;
+  }
+}
+
+// Define the row styles
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 calc($gutter-width / 2); // Negate the container gutter to create gutters between columns
+}
+
+// Define the column styles
+.col {
+  flex: 1;
+  padding: 0 calc($gutter-width / 2); // Add half of the gutter width as padding to create gutters
+  box-sizing: border-box;
+}
+
+.flex{
+    display: flex;
+}
+
+// Generate classes for different column sizes
+@for $i from 1 through $grid-columns {
+  .col-#{$i} {
+    flex: 0 0 #{calc($i / $grid-columns)};
+    max-width: #{calc($i / $grid-columns)};
+  }
+}
+
+// Define media queries for different screen sizes
+$breakpoints: (
+  xl: 1200px,
+  lg: 992px,
+  md: 768px,
+  sm: 576px
+);
+
+.mobile-flex-column{
+  
+  @media (max-width: $screen-medium){
+    flex-direction: column;
+  }
+}
+.flex-space-between{
+  justify-content: space-between;
+}
+.flex-justify-center{
+  justify-content: center;
+}
+.flex-row {
+    flex-direction: row;
+}
+  
+.flex-column {
+    flex-direction: column;
+}
+  
+.align-items-start {
+    align-items: flex-start;
+}
+  
+.align-items-center {
+    align-items: center;
+}
+  
+.align-items-end {
+    align-items: flex-end;
+}
+
+.relative-block{
+  position: relative;
+}
+
+.mt-235{
+  margin-top: 235px;
+  @media (max-width: $screen-medium){
+    margin-top: 0;
+  }
+}
+.mt-35{
+  margin-top: 35px;
+  @media (max-width: $screen-medium){
+    margin-top: 0;
+  }
+}
+
+.parallax-window{
+  min-height: 400px;
+  background: transparent;
+}
+
+
+:root {
+  --blue: #34aebe;
+  --dark-blue: #062453;
+}
+
+@keyframes moveRight {
+  from {
+    opacity: 0;
+    transform: translateX(-50px); /* Move from left */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Move to original position */
+  }
+}

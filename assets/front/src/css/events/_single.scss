@@ -1,0 +1,49 @@
+.event-details {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  h1 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  .event-featured-image {
+    margin-bottom: 20px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .event-content {
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    word-break: break-word;
+  }
+
+  .event-info p {
+    font-weight: bold;
+  }
+}
+
+.event-link-wrapper {
+  display: flex;
+  justify-content: flex-end; /* Align content to end */
+}
+.event-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  &:hover{
+    background-color: #2980b9; /* Change button background color on hover */
+  }
+}

@@ -1,0 +1,25 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    font-family: $font-popins;
+    margin: 0;
+    padding: 0;
+    color: #000;
+    overflow-x: hidden;
+  }
+
+  b, strong{font-weight: 700;}
+a{cursor:pointer;text-decoration:none;outline:none;color:inherit;-webkit-transition: all 0.3s linear;-o-transition: all 0.3s linear;transition: all 0.3s linear;}
+a:link, a:visited, a:active, a:hover{cursor:pointer;text-decoration:none;outline:none;}
+iframe{border:none;outline:none;}
+ul, ol{list-style: none;}
+em{font-style: italic;}
+img{height:auto;max-width:100%;}

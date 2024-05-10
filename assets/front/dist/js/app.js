@@ -1,0 +1,1 @@
+jQuery(document).ready(function(t){const n=t("#events-container");t("#toggle-layout").click(function(){n.toggleClass("as-list")})});
