@@ -7,9 +7,7 @@ The Event Banner Plugin is a WordPress plugin designed to enhance your website w
 - Before installing the plugin, make sure you have Composer and npm installed on your system.
 - Navigate to the plugin directory using the command line.
 - Run the following commands to install dependencies:
-```bash
-composer install
-npm install```
+```bash composer install```
 
 3.Activate the Plugin: Upload the plugin files to your WordPress plugins directory (wp-content/plugins/) and activate the Event Banner Plugin through the WordPress admin dashboard.
 4.Frontend Customization: 
