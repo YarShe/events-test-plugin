@@ -49,7 +49,8 @@ The plugin provides a shortcode [event-sc] to display event banners on your webs
 
 **Usage**:
 ```php
-[event-sc id=<event_id> orientation=<orientation>]```
+[event-sc id=<event_id> orientation=<orientation>]
+```
 
 **Attributes:**
 
