@@ -8,7 +8,7 @@ namespace App\bootstrap;
 class Admin {
 
 	public function __construct() {
-		add_action( 'admin_menu', [ $this, 'admin_menu' ] );
+		$this->init_hooks();
 	}
 
 	/**
@@ -16,28 +16,7 @@ class Admin {
 	 *
 	 * @return void
 	 */
-	public function admin_menu() {
-		global $submenu;
 
-		$capability = 'manage_options';
-		$slug       = 'vue-app';
-
-		$hook = add_menu_page( __( 'Vue App', 'textdomain' ), __( 'Vue App', 'textdomain' ), $capability, $slug, [
-			$this,
-			'plugin_page'
-		], 'dashicons-text' );
-
-		if ( current_user_can( $capability ) ) {
-			$submenu[ $slug ][] = array( __( 'App', 'textdomain' ), $capability, 'admin.php?page=' . $slug . '#/' );
-			$submenu[ $slug ][] = array(
-				__( 'Settings', 'textdomain' ),
-				$capability,
-				'admin.php?page=' . $slug . '#/settings'
-			);
-		}
-
-		add_action( 'load-' . $hook, [ $this, 'init_hooks' ] );
-	}
 
 	/**
 	 * Initialize our hooks for the admin page
